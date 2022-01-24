@@ -2,6 +2,7 @@ package lexer
 
 import "github.com/leewei05/monkey/token"
 
+// PROD: consider using io.Reader to handle filename and line numbers
 type Lexer struct {
 	input string
 	// position is the current position in input(points to current char)

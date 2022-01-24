@@ -38,3 +38,7 @@ func TestNextToken(t *testing.T) {
 		}
 	}
 }
+
+func TestReadChar(t *testing.T) {
+
+}
