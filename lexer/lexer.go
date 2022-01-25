@@ -1,6 +1,8 @@
 package lexer
 
-import "github.com/leewei05/monkey/token"
+import (
+	"github.com/leewei05/monkey/token"
+)
 
 // PROD: consider using io.Reader to handle filename and line numbers
 type Lexer struct {
@@ -14,12 +16,9 @@ type Lexer struct {
 }
 
 func New(input string) *Lexer {
-	lexer := &Lexer{
-		input: input,
-	}
-	lexer.NextToken()
-
-	return lexer
+	l := &Lexer{input: input}
+	l.readChar()
+	return l
 }
 
 func (l *Lexer) NextToken() token.Token {

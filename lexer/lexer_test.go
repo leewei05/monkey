@@ -21,7 +21,7 @@ func TestNextToken(t *testing.T) {
 		{token.RBRACE, "}"},
 		{token.COMMA, ","},
 		{token.SEMICOLON, ";"},
-		{token.EOF, "EOF"},
+		{token.EOF, ""},
 	}
 
 	l := New(input)
@@ -37,8 +37,4 @@ func TestNextToken(t *testing.T) {
 			t.Fatalf("tests[%d] - literal wrong. expected=%q, got=%q", i, tt.expectedLiteral, tok.Literal)
 		}
 	}
-}
-
-func TestReadChar(t *testing.T) {
-
 }
